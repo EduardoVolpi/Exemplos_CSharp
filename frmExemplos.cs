@@ -16,11 +16,7 @@ namespace Exemplos
     {
 #if WINDOWS
         WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-#endif
-        // Constante caminhos de arquivos
-        private const string V2 = @"D:\VS\Projetos\csExemplos\Assets\teste.txt";
-        private const string V3 = @"D:\VS\Projetos\csExemplos\Assets\teste.rtf";
-        private const string V4 = @"D:\VS\Projetos\csExemplos";
+#endif   
 
         // Inicializando var utilizada pelo eventos de Sons Wav e Mp3
         private int playing = 0;
@@ -230,13 +226,10 @@ namespace Exemplos
 
         private void btnExtrairNomeDeArquivoOuPasta_Click(object sender, EventArgs e)
         {
+            string arquivo = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\teste.rtf";
             // Extrai do caminho o nome do arquivo
-            string nomeArquivo = Path.GetFileName(V3);
-            MessageBox.Show(V3 + "\n\nNome do Arquivo Extraído: " + nomeArquivo);
-
-            // Extrai do caminho o nome da Pasta / Dir
-            string nomeDir = Path.GetFileName(V4);
-            MessageBox.Show(V4 + "\n\nNome do Diretório Extraído: " + nomeDir);
+            string nomeArquivo = Path.GetFileName(arquivo);
+            MessageBox.Show(arquivo + "\n\nNome do Arquivo Extraído: " + nomeArquivo);
         }
 
         private void btnFolderBrowseDialog_Click(object sender, EventArgs e)
@@ -356,14 +349,14 @@ Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             // System.IO
             try
             {
-                StreamWriter gravar = new StreamWriter(V2);
+                string arquivo = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\teste.txt";
+                StreamWriter gravar = new StreamWriter(arquivo);
 
                 gravar.WriteLine("Oi Mundo nesta primeira linha");
                 gravar.WriteLine("Continua a segunda linha do Olá Mundo!");
                 gravar.WriteLine("e finalmente a última linha do mundão olado.");
                 gravar.WriteLine();
-                gravar.WriteLine("Gravado em " + DateTime.Now.ToShortDateString());
-                gravar.WriteLine("às " + DateTime.Now.ToShortTimeString() + "hs");
+                gravar.WriteLine("Gravado em " + DateTime.Now.ToShortDateString() + " às " + DateTime.Now.ToShortTimeString() + "hs");
                 gravar.Close();
                 MessageBox.Show("Arquivo Gravado!", Application.ProductName, MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
@@ -421,9 +414,11 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
         private void btnLerArquivoEmDisco_Click(object sender, EventArgs e)
         {
             //System.IO
-            if (File.Exists(V2))
+            string arquivo = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\teste.txt";
+
+            if (File.Exists(arquivo))
             {
-                StreamReader ler = new StreamReader(V2);
+                StreamReader ler = new StreamReader(arquivo);
 
                 MessageBox.Show(ler.ReadToEnd());
 
