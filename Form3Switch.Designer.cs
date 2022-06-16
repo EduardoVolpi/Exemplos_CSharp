@@ -147,6 +147,7 @@
             this.Controls.Add(this.radioBtnWingChun);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnFechar);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;

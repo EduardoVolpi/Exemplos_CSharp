@@ -150,6 +150,7 @@
             this.StatusLabelData = new System.Windows.Forms.ToolStripStatusLabel();
             this.openMp3 = new System.Windows.Forms.OpenFileDialog();
             this.openWav = new System.Windows.Forms.OpenFileDialog();
+            this.label21 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -206,6 +207,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Controls.Add(this.btnVariaveisConstantes);
             this.groupBox4.Controls.Add(this.btnTiposDados);
             this.groupBox4.Controls.Add(this.label20);
@@ -1526,6 +1528,15 @@
             // 
             this.openWav.Filter = "Arquivos de Música|*.wav";
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(515, 19);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(44, 15);
+            this.label21.TabIndex = 27;
+            this.label21.Text = "label21";
+            // 
             // frmExemplos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1534,6 +1545,7 @@
             this.Controls.Add(this.StatusBar);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.Panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -1547,6 +1559,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -1694,6 +1707,7 @@
         private System.Windows.Forms.Button btnVariaveisConstantes;
         private System.Windows.Forms.OpenFileDialog openMp3;
         private System.Windows.Forms.OpenFileDialog openWav;
+        private System.Windows.Forms.Label label21;
     }
 }
 

@@ -369,8 +369,7 @@ Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         private void btnIfElse_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Voce é maior de Idade?", Application.ProductName,
-MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Voce é maior de Idade?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 MessageBox.Show("Então voce tem 18 anos ou mais", Application.ProductName,
                MessageBoxButtons.OK, MessageBoxIcon.Information);

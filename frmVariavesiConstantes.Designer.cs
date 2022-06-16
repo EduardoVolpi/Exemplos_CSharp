@@ -62,6 +62,7 @@
             this.ClientSize = new System.Drawing.Size(741, 279);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.pictureBox3);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
